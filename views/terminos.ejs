@@ -1,0 +1,35 @@
+<%- include("_header") -%>
+
+<h1>Lista de términos (<%= model.length %>)</h1>
+
+<div class="table-responsive-sm">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Estado</th>
+        <th>Id Concepto</th>
+        <th>Término</th>
+        <th class="d-print-none">
+          <a class="btn btn-sm btn-success" href="/create">añadir</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const termino of model) { %>
+        <tr>
+          <td><%= termino.codigo %></td>
+          <td><%= termino.active %></td>
+          <td><%= termino.conceptid %></td>
+          <td><%= termino.term %></td>
+          <td class="d-print-none">
+            <a class="btn btn-sm btn-warning" href="/edit/<%= termino.codigo %>">Modificar</a>
+            <a class="btn btn-sm btn-danger" href="/delete/<%= termino.codigo %>">Borrar</a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+
+<%- include("_footer") -%>

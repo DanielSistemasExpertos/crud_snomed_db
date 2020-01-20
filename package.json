@@ -1,0 +1,21 @@
+{
+  "name": "AppTestPG",
+  "version": "1.0.0",
+  "description": "Application CRUD avec Express et PostgreSQL en 10 étapes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
